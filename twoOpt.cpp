@@ -7,7 +7,7 @@ vector<int> twoOpt(vector<vector<int>> dis,vector<int> route){
     {
         int vMax = 0, iMax = route.size() + 1;
 
-        for (int j = i + 2; j < N;j++){
+        for (int j = i + 2; j < (int)route.size()-1;j++){
             int tmp = dis[route[i]][route[i + 1]] + dis[route[j]][route[j + 1]] - dis[route[i]][route[j]] - dis[route[i + 1]][route[j + 1]];
             if(vMax < tmp && route[i] != route[j+1]){
                 vMax = tmp;
